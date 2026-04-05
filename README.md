@@ -1,5 +1,5 @@
 # cachy-arch-dwm
-My post install script for CachyOS and vanilla Arch with DWM
+Post install script for CachyOS and vanilla Arch with my DWM setup (only for myself!)
 
 ./cachy-arch-dwm-installer.sh --dry-run
 
