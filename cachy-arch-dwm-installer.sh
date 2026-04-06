@@ -860,6 +860,14 @@ command -v setxkbmap >/dev/null 2>&1 && setxkbmap se
 command -v xsetroot >/dev/null 2>&1 && xsetroot -solid "#111111"
 '
 
+write_user_hook_if_missing "$XINITRC_DIR/15-screenlayout.sh" '#!/usr/bin/env bash
+# Apply host-specific screen layout if available
+
+if [[ -x "$HOME/.local/bin/apply-screenlayout.sh" ]]; then
+  "$HOME/.local/bin/apply-screenlayout.sh"
+fi
+'
+
   write_user_hook_if_missing "$XINITRC_DIR/20-lookandfeel.sh" '#!/usr/bin/env bash
 command -v dunst >/dev/null 2>&1 && ! pgrep -x dunst >/dev/null 2>&1 && dunst &
 if command -v picom >/dev/null 2>&1 && ! pgrep -x picom >/dev/null 2>&1; then
