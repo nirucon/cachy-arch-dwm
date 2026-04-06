@@ -863,6 +863,9 @@ command -v xsetroot >/dev/null 2>&1 && xsetroot -solid "#111111"
 write_user_hook_if_missing "$XINITRC_DIR/15-screenlayout.sh" '#!/usr/bin/env bash
 # Apply host-specific screen layout if available
 
+# Only run inside X session
+[ -n "$DISPLAY" ] || exit 0
+
 if [[ -x "$HOME/.local/bin/apply-screenlayout.sh" ]]; then
   "$HOME/.local/bin/apply-screenlayout.sh"
 fi
