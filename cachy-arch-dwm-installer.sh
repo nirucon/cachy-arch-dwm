@@ -94,7 +94,7 @@ PACMAN_BASE_DEPS=(
 # Add your extra normal pacman packages here.
 PACMAN_OPTIONAL_APPS=(
   neovim ripgrep fd fzf jq btop fastfetch cmus mpv sxiv imagemagick gtk3 gtk4
-  lxappearance gimp kitty
+  lxappearance gimp kitty kew
 )
 
 # Add your extra paru/AUR packages here.
