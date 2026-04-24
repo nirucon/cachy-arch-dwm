@@ -906,7 +906,7 @@ fi
 '
 
   write_user_hook_if_missing "$XINITRC_DIR/50-lock.sh" '#!/usr/bin/env bash
-command -v xautolock >/dev/null 2>&1 && command -v slock >/dev/null 2>&1 && ! pgrep -x xautolock >/dev/null 2>&1 && xautolock -time 10 -locker slock &
+command -v xautolock >/dev/null 2>&1 && command -v slock >/dev/null 2>&1 && ! pgrep -x xautolock >/dev/null 2>&1 && xautolock -time 10 -locker slock -detectsleep &
 '
 
   write_user_hook_if_missing "$XINITRC_DIR/90-local.sh" '#!/usr/bin/env bash
