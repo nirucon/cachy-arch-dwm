@@ -93,8 +93,64 @@ PACMAN_BASE_DEPS=(
 
 # Add your extra normal pacman packages here.
 PACMAN_OPTIONAL_APPS=(
-  neovim ripgrep fd fzf jq btop fastfetch cmus mpv sxiv imagemagick gtk3 gtk4
-  lxappearance gimp kitty kew
+  # Editors / terminal / CLI
+  neovim vim micro
+  ripgrep fd fzf jq
+  btop glances duf ncdu
+  fastfetch tree pv
+  bash-completion pacman-contrib pkgfile plocate
+  vim-spell-en vim-spell-sv
+
+  # Mail / calendar / TUI workflow
+  aerc
+  khal
+  vdirsyncer
+
+  # Browsers / communication
+  qutebrowser
+  signal-desktop
+
+  # File transfer / sync / remote access
+  tailscale
+  localsend
+  kdeconnect
+  filezilla
+  openssh
+
+  # Development / containers
+  docker
+  docker-compose
+  meld
+
+  # Office / writing
+  libreoffice-fresh
+  libreoffice-fresh-sv
+
+  # Media / music / video
+  cmus
+  kew
+  mpv
+  obs-studio
+  yt-dlp
+  ffmpegthumbnailer
+  gimp
+  imagemagick
+  sxiv
+  haruna
+  vlc-plugins-all
+  libdvdcss
+
+  # Desktop tools
+  kitty
+  arandr
+  lxappearance
+  ark
+  gwenview
+  spectacle
+  filelight
+
+  # Archives / formats
+  unrar
 )
 
 # Add your extra paru/AUR packages here.
@@ -102,7 +158,15 @@ PARU_APPS=(
   xautolock
   ttf-jetbrains-mono-nerd
   fresh-editor
-  brave-bin
+
+  # Browser
+  brave-origin-beta-bin
+
+  # Music / streaming
+  spotify
+
+  # Authenticator / 2FA
+  otpclient-git
 )
 
 # ------------------------------ STYLING --------------------------------------
